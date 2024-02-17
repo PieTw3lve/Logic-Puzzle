@@ -7,7 +7,7 @@ import javafx.scene.layout.AnchorPane;
 
 public class Controller {
     
-    // Menus Vars
+    // Menu Vars
     
     @FXML
     private AnchorPane startMenu;
