@@ -4,7 +4,6 @@ import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.VBox;
 
 public class Controller {
     
@@ -14,7 +13,7 @@ public class Controller {
     private AnchorPane startMenu;
 
     @FXML
-    private VBox puzzle3x4Menu;
+    private AnchorPane puzzle3x4Menu;
 
     // Puzzle Parameter Vars
 
