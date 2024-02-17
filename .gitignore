@@ -1,0 +1,5 @@
+# Ignore
+
+.vscode/
+bin/
+lib/
