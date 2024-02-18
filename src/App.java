@@ -12,7 +12,7 @@ public class App extends Application {
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("LogicPuzzle.fxml"));
         primaryStage.setTitle("Logic Puzzle");
-        primaryStage.setScene(new Scene(root, 600, 500));
+        primaryStage.setScene(new Scene(root, 860 , 620 ));
         primaryStage.setResizable(false);
         primaryStage.show();
     }

@@ -8,17 +8,17 @@ import java.util.List;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
 
 public class Controller {
     
     // Menu Vars
     
     @FXML
-    private AnchorPane startMenu;
+    private GridPane startMenu;
 
     @FXML
-    private AnchorPane puzzle3x4Menu;
+    private GridPane puzzle3x4Menu;
 
     // Puzzle Parameter Vars
 
