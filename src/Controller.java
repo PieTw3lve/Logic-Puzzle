@@ -59,7 +59,7 @@ public class Controller {
         }
         switch (difficulty) {
             case "Easy":
-                // Difficulty increases point multiplier
+                // Difficulty increases point multiplier code here
                 break;
             // Handle other difficulty levels here if needed
         }

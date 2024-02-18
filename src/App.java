@@ -10,7 +10,6 @@ public class App extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Application.setUserAgentStylesheet("nord-light.css");
         Parent root = FXMLLoader.load(getClass().getResource("LogicPuzzle.fxml"));
         primaryStage.setTitle("Logic Puzzle");
         primaryStage.setScene(new Scene(root, 600, 500));
