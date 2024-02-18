@@ -1,7 +1,11 @@
 // Eric Lim
 
 import javafx.fxml.FXML;
+
+import java.util.List;
+
 import javafx.event.ActionEvent;
+import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.layout.AnchorPane;
 
@@ -19,11 +23,11 @@ public class Controller {
 
     @FXML
     private ChoiceBox<String> gridSizeOption;
-    private String[] sizes = {"3x4 Grid"};
+    private List<String> sizes = List.of("3x4 Grid");
 
     @FXML
     private ChoiceBox<String> difficultyRangeOption;
-    private String[] difficulties = {"Easy"};
+    private List<String> difficulties = List.of("Easy");
 
     // Methods
 
@@ -40,12 +44,11 @@ public class Controller {
     
         if (gridSize != null && difficulty != null) {
             startMenu.setVisible(false);
-            handleGridSize(gridSize);
-            handleDifficulty(difficulty);
+            handleGrid(gridSize, difficulty);
         }
     }
 
-    private void handleGridSize(String gridSize) {
+    private void handleGrid(String gridSize, String difficulty) {
         switch (gridSize) {
             case "3x4 Grid":
                 // Generate puzzle code or something
@@ -53,14 +56,19 @@ public class Controller {
                 break;
             // Handle other grid sizes here if needed
         }
-    }
-    
-    private void handleDifficulty(String difficulty) {
         switch (difficulty) {
             case "Easy":
-                // I have no clue what difficulty changes
+                // Difficulty increases point multiplier
                 break;
             // Handle other difficulty levels here if needed
         }
+    }
+
+    @FXML
+    void onBoxClicked(ActionEvent event) {
+        Button button = (Button) event.getSource();
+        List<String> labels = List.of("", "O", "X");
+        int currentIndex = labels.indexOf(button.getText());
+        button.setText(labels.get((currentIndex + 1) % labels.size()));
     }
 }

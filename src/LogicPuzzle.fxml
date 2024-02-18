@@ -258,22 +258,70 @@
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.rowIndex="1" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.rowIndex="2" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.rowIndex="3" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="2">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="3">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
                                  </children>
                               </GridPane>
                               <GridPane gridLinesVisible="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
@@ -290,22 +338,70 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.rowIndex="1" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.rowIndex="2" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.rowIndex="3" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="2">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="3">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
                                  </children>
                               </GridPane>
                               <GridPane gridLinesVisible="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
@@ -322,22 +418,70 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.rowIndex="1" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.rowIndex="2" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.rowIndex="3" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="2">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="3">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
+                                    <Button alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBoxClicked" style="-fx-background-color: transparent;" textOverrun="CLIP" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Button>
                                  </children>
                               </GridPane>
                            </children>
