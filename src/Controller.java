@@ -2,6 +2,7 @@
 
 import javafx.fxml.FXML;
 
+import java.util.Arrays;
 import java.util.List;
 
 import javafx.event.ActionEvent;
@@ -23,11 +24,11 @@ public class Controller {
 
     @FXML
     private ChoiceBox<String> gridSizeOption;
-    private List<String> sizes = List.of("3x4 Grid");
+    private List<String> sizes = Arrays.asList("3x4 Grid");
 
     @FXML
     private ChoiceBox<String> difficultyRangeOption;
-    private List<String> difficulties = List.of("Easy");
+    private List<String> difficulties = Arrays.asList("Easy");
 
     // Methods
 
@@ -67,7 +68,7 @@ public class Controller {
     @FXML
     void onBoxClicked(ActionEvent event) {
         Button button = (Button) event.getSource();
-        List<String> labels = List.of("", "O", "X");
+        List<String> labels = Arrays.asList("", "O", "X");
         int currentIndex = labels.indexOf(button.getText());
         button.setText(labels.get((currentIndex + 1) % labels.size()));
     }
