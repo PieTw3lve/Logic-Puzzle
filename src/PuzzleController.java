@@ -1,3 +1,5 @@
+// Eric Lim
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -26,5 +28,25 @@ public class PuzzleController {
         List<String> labels = Arrays.asList("", "O", "X");
         int currentIndex = labels.indexOf(button.getText());
         button.setText(labels.get((currentIndex + 1) % labels.size()));
+    }
+
+    @FXML
+    void requestHint(ActionEvent event) {
+        return;
+    }
+
+    @FXML
+    void clearErrors(ActionEvent event) {
+        return;
+    }
+
+    @FXML
+    void startOver(ActionEvent event) {
+        return;
+    }
+
+    @FXML
+    void submitAnswers(ActionEvent event) {
+        return;
     }
 }

@@ -16,8 +16,6 @@ import javafx.scene.control.ChoiceBox;
 
 public class StartController {
 
-    // Puzzle Parameter Vars
-
     PuzzleData data = PuzzleData.getInstance();
 
     @FXML
@@ -27,8 +25,6 @@ public class StartController {
     @FXML
     private ChoiceBox<String> difficultyRangeOption;
     private List<String> difficulties = Arrays.asList("Easy");
-
-    // Methods
 
     @FXML
     public void initialize() {
@@ -47,9 +43,10 @@ public class StartController {
     }
 
     private void handleGrid(ActionEvent event, String gridSize, String difficulty) throws IOException {
+        data.setGridSize(gridSize);
+        data.setDifficulty(difficulty);
         switch (gridSize) {
             case "3x4 Grid":
-                data.setDifficulty(difficulty);
                 switchScene(event, "fxml/Puzzle3x4.fxml");
             // Handle other grid sizes here if needed
         }
