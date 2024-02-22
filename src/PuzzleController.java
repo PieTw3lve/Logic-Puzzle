@@ -16,7 +16,7 @@ public class PuzzleController {
     private String difficulty = data.getDifficulty();
     private int time = 0;
     private int score = 0;
-//edhgrthetwhrthrhrwerthrewth
+
     @FXML
     private GridPane grid1;
 
