@@ -6,20 +6,30 @@ import java.util.List;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.layout.GridPane;
 
 public class PuzzleController {
     
     PuzzleData data = PuzzleData.getInstance();
     
-    private String difficulty;
-    private int time;
-    private int score;
+    private String gridSize = data.getGridSize();
+    private String difficulty = data.getDifficulty();
+    private int time = 0;
+    private int score = 0;
+
+    @FXML
+    private GridPane grid1;
+
+    @FXML
+    private GridPane grid2;
+
+    @FXML
+    private GridPane grid3;
+
 
     @FXML
     public void initialize() {
-        difficulty = data.getDifficulty();
-        time = 0;
-        score = 0;
+        Grid answerGrid = new Grid();
     }
 
     @FXML
@@ -47,6 +57,7 @@ public class PuzzleController {
 
     @FXML
     void submitAnswers(ActionEvent event) {
-        return;
+        List<GridPane> gridPanes = Arrays.asList(grid1, grid2, grid3);
+        Grid grid = new Grid(gridPanes);
     }
 }
