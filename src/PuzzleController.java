@@ -12,6 +12,9 @@ public class PuzzleController {
     
     PuzzleData data = PuzzleData.getInstance();
     
+    private UserGrid userGrid;
+    private AnswerGrid answerGrid;
+    private List<GridPane> userInput;
     private String gridSize = data.getGridSize();
     private String difficulty = data.getDifficulty();
     private int time = 0;
@@ -29,7 +32,13 @@ public class PuzzleController {
 
     @FXML
     public void initialize() {
-        // initialize() code here
+        switch (data.getGridSize()) {
+            case "3x4 Grid":
+                answerGrid = new AnswerGrid(3, 4, 4);
+        }
+        answerGrid.generateAnswers();
+        data.setAnswer(answerGrid.getPuzzleBoard());
+        System.out.println(answerGrid.toString());
     }
 
     @FXML
@@ -57,9 +66,13 @@ public class PuzzleController {
 
     @FXML
     void submitAnswers(ActionEvent event) {
-        List<GridPane> gridPanes = Arrays.asList(grid1, grid2, grid3);
-        UserGrid userGrid = new UserGrid();
-        userGrid.convertToGrid(gridPanes);
+        switch (data.getGridSize()) {
+            case "3x4 Grid":
+                userInput = Arrays.asList(grid1, grid2, grid3);
+                userGrid = new UserGrid(3, 4, 4);
+                break;
+        }
+        userGrid.convertUserInputToGrid(userInput);
         System.out.println(userGrid.toString());
     }
 }

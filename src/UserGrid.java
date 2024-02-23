@@ -14,8 +14,11 @@ public class UserGrid extends Grid {
         super();
     }
 
-    public void convertToGrid(List<GridPane> gridPanes) {
-        // Converts user's input into a grid
+    public UserGrid(int grids, int rows, int cols) {
+        super(grids, rows, cols);
+    }
+
+    public void convertUserInputToGrid(List<GridPane> gridPanes) {
         int gridIndex = 0;
         for (GridPane gridPane : gridPanes) {
             ObservableList<Node> buttons = gridPane.getChildren();
@@ -25,7 +28,6 @@ public class UserGrid extends Grid {
                     String text = button.getText();
                     int rowIndex = (GridPane.getRowIndex(node) == null) ? 0 : GridPane.getRowIndex(node);
                     int columnIndex = (GridPane.getColumnIndex(node) == null) ? 0 : GridPane.getColumnIndex(node);
-                    this.ensureCapacity(gridIndex, rowIndex, columnIndex);
                     switch (text) {
                         case "":
                             setValue(gridIndex, rowIndex, columnIndex, false);
