@@ -58,7 +58,8 @@ public class PuzzleController {
     @FXML
     void submitAnswers(ActionEvent event) {
         List<GridPane> gridPanes = Arrays.asList(grid1, grid2, grid3);
-        Grid grid = new Grid(gridPanes);
-        System.out.println(grid.toString());
+        UserGrid userGrid = new UserGrid();
+        userGrid.convertToGrid(gridPanes);
+        System.out.println(userGrid.toString());
     }
 }
