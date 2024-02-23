@@ -80,8 +80,12 @@ public class Grid {
         this.grids.get(gridIndex)[row][col] = value;
     }
 
-    public Boolean getValue(int gridIndex, int row, int col, boolean value) {
-        return this.grids.get(gridIndex)[row][col];
+    public Boolean getValue(int gridIndex, int row, int col) {
+        try {
+            return this.grids.get(gridIndex)[row][col];
+        } catch (Exception e) {
+            return null;
+        }
     }
 
     public void generateAnswers() {
