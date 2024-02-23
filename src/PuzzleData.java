@@ -16,7 +16,7 @@ public class PuzzleData {
     private String difficulty;
     private String story;
     private List<String> clues;
-    // private List<Character> answers; // Not entirely sure what type this will be yet
+    private List<Boolean[][]> answer; // Not entirely sure if this should be here
 
     private PuzzleData(){}
 
@@ -54,5 +54,15 @@ public class PuzzleData {
 
     public void setClues(List<String> clues) {
         this.clues = clues;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+            "gridSize='" + getGridSize() + "'" +
+            ", difficulty='" + getDifficulty() + "'" +
+            ", story='" + getStory() + "'" +
+            ", clues='" + getClues() + "'" +
+            "}";
     }
 }

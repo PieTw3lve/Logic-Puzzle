@@ -29,7 +29,7 @@ public class PuzzleController {
 
     @FXML
     public void initialize() {
-        Grid answerGrid = new Grid();
+        // initialize() code here
     }
 
     @FXML
@@ -42,22 +42,23 @@ public class PuzzleController {
 
     @FXML
     void requestHint(ActionEvent event) {
-        return;
+        // requestHint() code here
     }
 
     @FXML
     void clearErrors(ActionEvent event) {
-        return;
+        // clearErrors() code here
     }
 
     @FXML
     void startOver(ActionEvent event) {
-        return;
+        // startOver() code here
     }
 
     @FXML
     void submitAnswers(ActionEvent event) {
         List<GridPane> gridPanes = Arrays.asList(grid1, grid2, grid3);
         Grid grid = new Grid(gridPanes);
+        System.out.println(grid.toString());
     }
 }
