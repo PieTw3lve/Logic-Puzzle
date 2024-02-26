@@ -1,5 +1,6 @@
 // Eric Lim
 // Arjenis Montenegro
+// Sukhdeep Singh
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
