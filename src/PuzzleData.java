@@ -16,7 +16,7 @@ public class PuzzleData {
     private String difficulty;
     private String story;
     private List<String> clues;
-    private List<Boolean[][]> answer;
+    private List<Boolean[][]> answer; // Not entirely sure if this should be here
 
     private PuzzleData(){}
 
@@ -71,8 +71,6 @@ public class PuzzleData {
             ", difficulty='" + getDifficulty() + "'" +
             ", story='" + getStory() + "'" +
             ", clues='" + getClues() + "'" +
-            ", answer='" + getAnswer() + "'" +
             "}";
     }
-
 }

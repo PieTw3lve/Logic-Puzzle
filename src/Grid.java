@@ -1,10 +1,8 @@
-// Eric Lim
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Grid {
-    
+
     private List<Boolean[][]> puzzleBoard;
 
     public Grid() {
