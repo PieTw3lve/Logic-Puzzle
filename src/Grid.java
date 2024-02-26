@@ -1,3 +1,15 @@
+// Eric Lim
+
+/**
+ * Grid class represents a collection of boolean grids.
+ * Each grid is a two-dimensional array of boolean values, 
+ * where each cell represents either true or false.
+ * 
+ * This class provides functionality to manipulate the grids, 
+ * such as setting and getting values, changing the grid capacity,
+ * and generating a string representation of the grids.
+ */
+
 import java.util.ArrayList;
 import java.util.List;
 

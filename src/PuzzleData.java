@@ -1,7 +1,5 @@
 // Eric Lim
 
-import java.util.List;
-
 /**
  * The PuzzleData class represents data related to a logic puzzle, including its information.
  * This class follows the Singleton design pattern, ensuring only one instance of PuzzleData exists
@@ -14,9 +12,6 @@ public class PuzzleData {
 
     private String gridSize;
     private String difficulty;
-    private String story;
-    private List<String> clues;
-    private List<Boolean[][]> answer; // Not entirely sure if this should be here
 
     private PuzzleData(){}
 
@@ -40,37 +35,11 @@ public class PuzzleData {
         this.difficulty = difficulty;
     }
 
-    public String getStory() {
-        return this.story;
-    }
-
-    public void setStory(String story) {
-        this.story = story;
-    }
-
-    public List<String> getClues() {
-        return this.clues;
-    }
-
-    public void setClues(List<String> clues) {
-        this.clues = clues;
-    }
-
-    public List<Boolean[][]> getAnswer() {
-        return this.answer;
-    }
-
-    public void setAnswer(List<Boolean[][]> answer) {
-        this.answer = answer;
-    }
-
     @Override
     public String toString() {
         return "{" +
             "gridSize='" + getGridSize() + "'" +
             ", difficulty='" + getDifficulty() + "'" +
-            ", story='" + getStory() + "'" +
-            ", clues='" + getClues() + "'" +
             "}";
     }
 }

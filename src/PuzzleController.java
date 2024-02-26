@@ -1,3 +1,6 @@
+// Eric Lim
+// Arjenis Montenegro
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -18,10 +21,11 @@ import java.util.List;
 
 public class PuzzleController {
 
+    // Puzzles
     private DinosaurPuzzle puzzle;
 
-    @FXML
-    private List<Text> answerNumbers, answerNames, answerAges;
+    // Puzzle Menu Components 
+    PuzzleData data = PuzzleData.getInstance();
 
     @FXML
     private Label HintL;
@@ -30,30 +34,20 @@ public class PuzzleController {
     private Text cluesText;
 
     @FXML
-    private GridPane LeftGrid, BottomGrid, RightGrid;
-
-    PuzzleData data = PuzzleData.getInstance();
-
-    private UserGrid userGrid;
-    private List<GridPane> userInput;
+    private Text name1, name2, name3, name4, ages1, ages2, ages3, ages4, ages5, ages6, ages7, ages8, price1, price2, price3, price4;
 
     @FXML
-    private Text NameOne, NameTwo, NameThree, NameFour;
+    private List<Text> answerNumbers, answerNames, answerAges;
 
-    public PuzzleController() {
-        puzzle = new DinosaurPuzzle();
-    }
+    // 3x4 Grid
+    @FXML
+    private GridPane LeftGrid, BottomGrid, RightGrid; 
 
     @FXML
     public void initialize() {
+        puzzle = new DinosaurPuzzle(); // Can change once theres more puzzles
         displayHints();
         updateTextFields();
-
-        if (data.getGridSize().equals("3x4 Grid")) {
-            setupGrid(LeftGrid);
-            setupGrid(BottomGrid);
-            setupGrid(RightGrid);
-        }
     }
 
     private void displayHints() {
@@ -62,20 +56,17 @@ public class PuzzleController {
     }
 
     private void updateTextFields() {
-        List<String> dinosaurs = puzzle.getNames();
-        NameOne.setText(dinosaurs.get(0));
-        NameTwo.setText(dinosaurs.get(1));
-        NameThree.setText(dinosaurs.get(2));
-        NameFour.setText(dinosaurs.get(3));
-    }
+        List<Text> names = Arrays.asList(name1, name2, name3, name4);
+        List<Text> ages = Arrays.asList(ages1, ages2, ages3, ages4);
+        List<Text> ages2 = Arrays.asList(ages5, ages6, ages7, ages8);
+        List<Text> prices = Arrays.asList(price1, price2, price3, price4);
 
-    private void setupGrid(GridPane grid) {
-        grid.getChildren().forEach(node -> {
-            if (node instanceof Button) {
-                Button button = (Button) node;
-                button.setOnAction(this::onBoxClicked);
-            }
-        });
+        for (int i=0; i < names.size(); i++) {
+            names.get(i).setText(puzzle.getNames().get(i));
+            ages.get(i).setText(puzzle.getAges().get(i));
+            ages2.get(i).setText(puzzle.getAges().get(i));
+            prices.get(i).setText(puzzle.getPrices().get(i));
+        }
     }
 
     @FXML
@@ -234,6 +225,8 @@ public class PuzzleController {
 
     @FXML
     void submitAnswers(ActionEvent event) {
+        UserGrid userGrid = new UserGrid();
+        List<GridPane> userInput = Arrays.asList();
         switch (data.getGridSize()) {
             case "3x4 Grid":
                 userInput = Arrays.asList(LeftGrid, BottomGrid, RightGrid);

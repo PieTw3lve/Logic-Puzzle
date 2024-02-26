@@ -1,3 +1,14 @@
+// Arjenis Montenegro
+
+/**
+ * DinosaurPuzzle class represents a specific implementation of the Puzzle interface.
+ * It provides functionality to generate answers and hints for a dinosaur-themed puzzle,
+ * as well as methods to retrieve dinosaur names, prices, and ages.
+ * 
+ * This class includes a story setting the context for the puzzle and maintains correct 
+ * answers, hints given, and other relevant puzzle data.
+ */
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -9,6 +20,40 @@ public class DinosaurPuzzle implements Puzzle {
     private List<String> ages = Arrays.asList("72 million", "75 million", "85 million", "90 million");
     private List<Boolean[][]> correctAnswers;
     private boolean[][] hintsGiven;
+    private String story = "Mitch has a huge collection of dinosaur fossils, and has decided to list some for sale online. Match each fossil to its species, age, and country in which it was found, as well as the price Mitch is asking for it.";
+
+    public List<String> getDinosaurs() {
+        return this.dinosaurs;
+    }
+
+    public void setDinosaurs(List<String> dinosaurs) {
+        this.dinosaurs = dinosaurs;
+    }
+
+    public List<String> getPrices() {
+        return this.prices;
+    }
+
+    public void setPrices(List<String> prices) {
+        this.prices = prices;
+    }
+    public void setAges(List<String> ages) {
+        this.ages = ages;
+    }
+    public void setCorrectAnswers(List<Boolean[][]> correctAnswers) {
+        this.correctAnswers = correctAnswers;
+    }
+    public void setHintsGiven(boolean[][] hintsGiven) {
+        this.hintsGiven = hintsGiven;
+    }
+
+    public String getStory() {
+        return this.story;
+    }
+
+    public void setStory(String story) {
+        this.story = story;
+    }
 
     public DinosaurPuzzle() {
         generateAnswers();
