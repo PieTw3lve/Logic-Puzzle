@@ -54,22 +54,22 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Placeholder" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\$500" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
                                     </Text>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Placeholder" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\$750" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
                                     </Text>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Placeholder" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\$1000" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
                                     </Text>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Placeholder" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\$1250" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -87,22 +87,22 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Placeholder" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="72 million" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
                                     </Text>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Placeholder" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="75 million" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
                                     </Text>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Placeholder" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="85 million" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
                                     </Text>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Placeholder" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="90 million" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -120,22 +120,22 @@
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <Text rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Placeholder" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                    <Text fx:id="NameOne" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="archadon" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
                                     </Text>
-                                    <Text rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Placeholder" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                    <Text fx:id="NameTwo" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="mirasaurus" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
                                     </Text>
-                                    <Text rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Placeholder" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                    <Text fx:id="NameThree" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="pilodontus" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
                                     </Text>
-                                    <Text rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Placeholder" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                    <Text fx:id="NameFour" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="rotosaurus" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -153,22 +153,22 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Text rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Placeholder" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                    <Text rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="72 million" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
                                     </Text>
-                                    <Text rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Placeholder" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                    <Text rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="75 million" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
                                     </Text>
-                                    <Text rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Placeholder" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                    <Text rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="85 million" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
                                     </Text>
-                                    <Text rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Placeholder" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                    <Text rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="90 million" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -471,7 +471,7 @@
                               <content>
                                     <VBox>
                                        <children>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Placeholder Clues" translateX="10.0" translateY="10.0" wrappingWidth="165.0">
+                                          <Text fx:id="cluesText" strokeType="OUTSIDE" strokeWidth="0.0" text="Placeholder Clues" translateX="10.0" translateY="10.0" wrappingWidth="165.0">
                                              <font>
                                                 <Font size="15.0" />
                                              </font>

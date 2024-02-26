@@ -40,9 +40,12 @@ public class PuzzleController {
     public void initialize() {
         displayHints();
         updateTextFields();
-        setupGrid(grid1);
-        setupGrid(grid2);
-        setupGrid(grid3);
+
+        if (data.getGridSize().equals("3x4 Grid")) {
+            setupGrid(grid1);
+            setupGrid(grid2);
+            setupGrid(grid3);
+        }
     }
 
     private void displayHints() {
@@ -115,9 +118,9 @@ public class PuzzleController {
             hintCounter++;
         } else {
             cluesText.setText("No more hints available.");
-        }
+        }   
     }
-
+    
     @FXML
     void clearErrors(ActionEvent event) {
         clearIncorrectAnswers(grid1, 0);
