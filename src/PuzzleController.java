@@ -1,10 +1,18 @@
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
@@ -13,16 +21,16 @@ public class PuzzleController {
     private DinosaurPuzzle puzzle;
 
     @FXML
-    private List<Text> answerPrices, answerDinosaurs, answerAges;
+    private List<Text> answerNumbers, answerNames, answerAges;
 
-    
-    private int hintCounter = 0;
+    @FXML
+    private Label HintL;
 
     @FXML
     private Text cluesText;
 
     @FXML
-    private GridPane grid1, grid2, grid3;
+    private GridPane LeftGrid, BottomGrid, RightGrid;
 
     PuzzleData data = PuzzleData.getInstance();
 
@@ -42,9 +50,9 @@ public class PuzzleController {
         updateTextFields();
 
         if (data.getGridSize().equals("3x4 Grid")) {
-            setupGrid(grid1);
-            setupGrid(grid2);
-            setupGrid(grid3);
+            setupGrid(LeftGrid);
+            setupGrid(BottomGrid);
+            setupGrid(RightGrid);
         }
     }
 
@@ -54,7 +62,7 @@ public class PuzzleController {
     }
 
     private void updateTextFields() {
-        List<String> dinosaurs = puzzle.getDinosaurs();
+        List<String> dinosaurs = puzzle.getNames();
         NameOne.setText(dinosaurs.get(0));
         NameTwo.setText(dinosaurs.get(1));
         NameThree.setText(dinosaurs.get(2));
@@ -112,20 +120,44 @@ public class PuzzleController {
 
     @FXML
     void requestHint(ActionEvent event) {
-        List<String> hints = puzzle.generateHints();
-        if (hintCounter < hints.size()) {
-            cluesText.setText(hints.get(hintCounter));
-            hintCounter++;
-        } else {
-            cluesText.setText("No more hints available.");
-        }   
+        String hintMessage = getNextHint();
+        HintL.setText(hintMessage);
     }
     
+    private String getNextHint() {
+        List<Boolean[][]> correctAnswers = puzzle.getCorrectAnswers();
+        boolean[][] hintsGiven = puzzle.getHintsGiven();
+    
+        for (int gridIndex = 0; gridIndex < correctAnswers.size(); gridIndex++) {
+            for (int rowIndex = 0; rowIndex < correctAnswers.get(gridIndex).length; rowIndex++) {
+                for (int colIndex = 0; colIndex < correctAnswers.get(gridIndex)[rowIndex].length; colIndex++) {
+                    if (correctAnswers.get(gridIndex)[rowIndex][colIndex] != null && correctAnswers.get(gridIndex)[rowIndex][colIndex] && !hintsGiven[gridIndex][rowIndex]) {
+                        // Mark hint as given
+                        puzzle.setHintGiven(gridIndex, rowIndex);
+    
+                        String gridName = getGridNameByIndex(gridIndex);
+                        return String.format("Correct answer at the %s, row %d, column %d", gridName, rowIndex + 1, colIndex + 1);
+                    }
+                }
+            }
+        }
+        return "No more hints available.";
+    }
+    
+    private String getGridNameByIndex(int index) {
+        switch (index) {
+            case 0: return "left grid";
+            case 1: return "bottom grid";
+            case 2: return "right grid";
+            default: return "unknown grid"; // should not happen
+        }
+    }
+
     @FXML
     void clearErrors(ActionEvent event) {
-        clearIncorrectAnswers(grid1, 0);
-        clearIncorrectAnswers(grid2, 1);
-        clearIncorrectAnswers(grid3, 2);
+        clearIncorrectAnswers(LeftGrid, 0);
+        clearIncorrectAnswers(BottomGrid, 1);
+        clearIncorrectAnswers(RightGrid, 2);
     }
 
     private void clearIncorrectAnswers(GridPane grid, int gridIndex) {
@@ -185,29 +217,64 @@ public class PuzzleController {
 
     @FXML
     void startOver(ActionEvent event) {
-        resetGrid(grid1);
-        resetGrid(grid2);
-        resetGrid(grid3);
-        displayHints();
+        switchScene(event, "fxml/Puzzle3x4.fxml");
     }
 
-    private void resetGrid(GridPane grid) {
-        grid.getChildren().forEach(node -> {
-            if (node instanceof Button) {
-                ((Button) node).setText("");
-            }
-        });
+    private void switchScene(ActionEvent event, String sceneName) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource(sceneName));
+            Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
     void submitAnswers(ActionEvent event) {
         switch (data.getGridSize()) {
             case "3x4 Grid":
-                userInput = Arrays.asList(grid1, grid2, grid3);
+                userInput = Arrays.asList(LeftGrid, BottomGrid, RightGrid);
                 userGrid = new UserGrid(3, 4, 4);
                 break;
+            // Handle other grid sizes here if needed
         }
         userGrid.convertUserInputToGrid(userInput);
-        System.out.println(userGrid.toString());
+
+        // Retrieve correct answers from DinosaurPuzzle
+        List<Boolean[][]> correctAnswers = puzzle.generateAnswers();
+
+        // Compare user input to correct answers
+        boolean allCorrect = true;
+        for (int i = 0; i < correctAnswers.size(); i++) {
+            Boolean[][] userGridValues = userGrid.getPuzzleBoard().get(i);
+            Boolean[][] correctValues = correctAnswers.get(i);
+
+            for (int row = 0; row < userGridValues.length; row++) {
+                for (int col = 0; col < userGridValues[row].length; col++) {
+                    if (userGridValues[row][col] != correctValues[row][col]) {
+                        allCorrect = false;
+                        // Optionally, you can mark the incorrect cell in the UI
+                        // For example, change the style of the Button
+                    }
+                }
+            }
+        }
+
+        // Display result in a JavaFX Alert
+        Alert alert = new Alert(allCorrect ? AlertType.INFORMATION : AlertType.ERROR);
+        alert.setTitle("Submission Result");
+        alert.setHeaderText(null);
+
+        if (allCorrect) {
+            alert.setContentText("Congratulations! All answers are correct.");
+        } else {
+            alert.setContentText("Some answers are incorrect. Please review your answers.");
+        }
+
+        // Show the alert and wait for the user to close it
+        alert.showAndWait();
     }
 }
